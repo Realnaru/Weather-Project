@@ -29,7 +29,7 @@ app.post("/", function(req, res) {
     const windSpeed = weatherData.wind.speed;
 
     res.write("<h1>The temperature in " + query +" is " + temp + " degrees Celsius</h1>");
-    res.write("Wind speed is " + windSpeed + "m/s");
+    res.write("<p>Wind speed is " + windSpeed + "m/s</p>");
     res.write("<p>The weather is currently " + description + "<p>");
     res.write("<img src=http://openweathermap.org/img/wn/" + icon + "@2x.png>");
     res.send();
